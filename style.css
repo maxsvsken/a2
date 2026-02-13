@@ -1,7 +1,7 @@
 :root {
   --primary-dark: #1C2541;
   --primary-blue: #1e3a8a;
-  --accent-blue: #3A86FF;
+  --accent-blue: #1e3a8a;
   --accent-cyan: #4cc9f0;
   --accent-green: #dcfce7;
   --bg-light: #f3f4f6;
@@ -25,7 +25,7 @@ html {
 body {
   font-family: var(--site-font);
   color: var(--text-main);
-  background-image: url('concept1.5.png');
+  background-image: url('concept1.3.png');
   background-position: center top;
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -229,6 +229,7 @@ ul {
 
 .hero-text-block {
   max-width: 700px;
+  margin-top: -200px;
 }
 
 .hero-shape-container {
