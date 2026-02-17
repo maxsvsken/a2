@@ -18,8 +18,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -30,7 +32,6 @@ body {
   background-attachment: scroll;
   background-repeat: no-repeat;
   line-height: 1.6;
-  overflow-x: hidden;
   position: relative;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -87,9 +88,16 @@ ul {
   z-index: 100;
   padding: 0;
   background: transparent;
-  backdrop-filter: none;
-  border-bottom: none;
+  transition: all 0.4s ease;
   animation: slideDown 0.6s ease-out;
+}
+
+.navbar.scrolled {
+  background: rgba(28, 37, 65, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  padding: 5px 0;
 }
 
 @keyframes slideDown {
@@ -106,7 +114,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .logo-circle {
@@ -294,12 +302,12 @@ ul {
   max-width: 900px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  overflow-wrap: break-word;
 }
 
 .title-line {
   display: block;
   margin-bottom: 5px;
-  white-space: nowrap;
 }
 
 .btn {
@@ -726,7 +734,6 @@ ul {
   margin-bottom: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  white-space: nowrap;
 }
 
 .contact-info p {
@@ -813,10 +820,25 @@ ul {
 
   .nav-links.active {
     right: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar {
+    background: rgba(28, 37, 65, 0.85);
+    /* Slightly darker on mobile for visibility */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .burger {
     display: block;
+    z-index: 101;
+  }
+
+  .burger div {
+    background-color: var(--white) !important;
+    height: 3px;
+    width: 30px;
   }
 
   .rule-item {
