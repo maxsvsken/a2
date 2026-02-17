@@ -916,8 +916,7 @@ ul {
 /* Mobile Optimization - Small devices */
 @media (max-width: 480px) {
   body {
-    background-size: 220% auto;
-    /* Уменьшаем масштаб (зум), чтобы кит стал "уже" и поместился в экран */
+    background-size: cover;
     background-position: 85% center;
     /* Смещаем еще сильнее вправо по картинке, чтобы кит "уехал" левее на экране */
   }
