@@ -917,8 +917,8 @@ ul {
 @media (max-width: 480px) {
   body {
     background-size: cover;
-    background-position: 75% center;
-    /* Adjusting to bring the whale from the right closer to center */
+    background-position: 85% center;
+    /* Смещаем еще сильнее вправо по картинке, чтобы кит "уехал" левее на экране */
   }
 
   .container {
