@@ -22,6 +22,10 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--primary-dark);
+  /* Match background for iOS bounce */
 }
 
 body {
@@ -115,6 +119,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  padding-left: calc(20px + env(safe-area-inset-left));
+  padding-right: calc(20px + env(safe-area-inset-right));
 }
 
 .logo-circle {
@@ -810,12 +816,14 @@ ul {
     right: -100%;
     top: 0;
     height: 100vh;
-    width: 70%;
+    height: -webkit-fill-available;
+    width: 75%;
     background: var(--primary-dark);
     flex-direction: column;
     justify-content: center;
-    transition: right 0.5s ease;
-    padding: 20px;
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    padding: 40px;
+    padding-right: calc(40px + env(safe-area-inset-right));
   }
 
   .nav-links.active {
@@ -1050,6 +1058,7 @@ ul {
 @supports (-webkit-touch-callout: none) {
   body {
     min-height: -webkit-fill-available;
+    background-attachment: scroll !important;
   }
 
   .hero {
