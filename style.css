@@ -917,7 +917,8 @@ ul {
 @media (max-width: 480px) {
   body {
     background-size: cover;
-    background-position: center center;
+    background-position: 75% center;
+    /* Adjusting to bring the whale from the right closer to center */
   }
 
   .container {
@@ -931,12 +932,16 @@ ul {
 
   .hero-content {
     padding-top: 80px;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-title {
     font-size: 1.8rem;
     letter-spacing: 1px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-subtitle {
